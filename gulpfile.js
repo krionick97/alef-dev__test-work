@@ -2,13 +2,21 @@
 
 const gulp = require('gulp');
 const gulpPlugin = require('gulp-load-plugins')();
+const browserSync = require('browser-sync').create();
+
+gulp.task('serve', function() {
+  browserSync.init({
+      server: "./public"
+  });
+});
 
 gulp.task('pug', function() {
   return gulp.src('app/assets/pug/pages/*.pug')
         .pipe(gulpPlugin.pug({
           pretty: true
         }))
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('public'))
+        .on('end', browserSync.reload);
 });
 
 gulp.task('sass', function() {
@@ -21,7 +29,10 @@ gulp.task('sass', function() {
           title: "Error in style"
         }))
         .pipe(gulpPlugin.sourcemaps.write())
-        .pipe(gulp.dest('public/styles/'));
+        .pipe(gulp.dest('public/styles/'))
+        .pipe(browserSync.reload({
+          stream: true
+        }));
 });
 
 gulp.task('watch', function() {
@@ -31,5 +42,5 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series(
   gulp.parallel('pug', 'sass'),
-  'watch'
+  gulp.parallel('watch', 'serve')
 ));
