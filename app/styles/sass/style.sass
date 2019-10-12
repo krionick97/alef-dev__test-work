@@ -1,2 +1,30 @@
+@import 'variables'
+@import 'fonts'
+@import 'mixins'
+
+html
+  font-size: 10px
+  height: 100%
+
 body
-  background-color: red
+  background-color: $color-common-bg
+  max-width: 120rem
+  height: 100%
+  margin: 0 auto
+
+.header, .footer
+  display: block
+  width: 100%
+  padding: 2.5rem 2rem 2.5rem 4rem
+  background-color: $color-main-bg
+
+/* UI elements */
+.button
+  +helvetica
+  padding: 0.7rem 1.5rem
+  font-size: 2.4rem
+  color: $color-main-bg
+
+@import 'header'
+@import 'section'
+@import 'footer'
