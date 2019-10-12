@@ -12,12 +12,10 @@ body
   height: 100%
   margin: 0 auto
 
-.header, .footer, .section
+.header, .footer
   display: block
   width: 100%
-  padding: 2.5rem 2rem 2.5rem 4rem
-
-.header, .footer
+  padding: 2rem 1.5rem 2rem 3rem
   background-color: $color-main-bg
 
 /* UI elements */
@@ -26,6 +24,12 @@ body
   padding: 0.7rem 1.5rem
   font-size: 2.4rem
   color: $color-main-bg
+
+
+@media (max-width: 1024px)
+  .header, .footer, .section
+    padding: 2rem 1.5rem
+
 
 @import 'header'
 @import 'section'

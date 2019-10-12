@@ -1,10 +1,40 @@
 .section
   display: block
-  max-height: 61rem
+  &__menu
+    height: 73vh
+    overflow-x: hidden
+    z-index: 2
+    padding: 2rem 2rem 0 5rem
   &__nav
+    &-item
+      max-width: 95%
+      overflow: hidden
+      text-overflow: ellipsis
+      color: $color-white
     &-link
+      white-space: pre
       +opensans-light
       font-size: 1.8rem
       color: $color-white
-  &__col
-    width: 10rem
+      &:hover
+        color: $color-white
+      &:active
+        color: red
+  &__leftBlock
+    background-color: $color-white
+    +opensans-reg
+    font-size: 1.6rem
+    color: $color-common-bg
+    max-width: 22rem
+  &__leftBlock, &__centerBlock, &__rightBlock
+    padding: 2rem 1.5rem
+    overflow-x: hidden
+    max-height: 73vh
+  &__centerBlock
+    background-color: $color-light-bg
+    margin: 0 0.5rem
+  &__centerBlock, &__rightBlock
+    +opensans-light
+    font-size: 1.4rem
+  &__rightBlock
+    max-width: 25rem
