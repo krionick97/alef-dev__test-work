@@ -5,6 +5,9 @@
     overflow-x: hidden
     z-index: 2
     padding: 2rem 2rem 0 5rem
+    transition: 0.5s ease-out
+    &-disable
+      opacity: 0
   &__nav
     &-item
       max-width: 95%
@@ -25,11 +28,11 @@
     +opensans-reg
     font-size: 1.6rem
     color: $color-common-bg
-    max-width: 22rem
+    width: 24rem
   &__leftBlock, &__centerBlock, &__rightBlock
     padding: 2rem 1.5rem
     overflow-x: hidden
-    max-height: 73vh
+    height: 73vh
   &__centerBlock
     background-color: $color-light-bg
     margin: 0 0.5rem
@@ -37,7 +40,7 @@
     +opensans-light
     font-size: 1.4rem
   &__rightBlock
-    max-width: 25rem
+    width: 25rem
 
 @media (max-width: 1023px)
   .section
