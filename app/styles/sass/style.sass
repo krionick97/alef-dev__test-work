@@ -15,10 +15,10 @@ body
 .row, .container, .container-fluid
   margin: 0
   padding: 0
+.container
+  max-width: 1200px
 
 .header, .footer
-  display: block
-  width: 100%
   padding: 2rem 1.5rem 2rem 3rem
   background-color: $color-main-bg
 
@@ -33,6 +33,16 @@ body
 @media (max-width: 1024px)
   .header, .footer, .section
     padding: 2rem 1.5rem
+
+@media (max-width: 764px)
+  .header, .footer, .section
+    padding: 1.6rem 1.3rem
+
+
+@media (max-width: 580px)
+  .button
+    font-size: 1.6rem
+    padding: 0.4rem 1.2rem
 
 
 @import 'header'
