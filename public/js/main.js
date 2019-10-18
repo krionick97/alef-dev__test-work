@@ -79,6 +79,7 @@ $(document).ready(function() {
     }
   }
   menuBarTransform(window.innerWidth);
-  /* ------------------------------------------------------- */
+  /* ------------------------------------------------------- end of mobile transforming */
+  
 
 });
