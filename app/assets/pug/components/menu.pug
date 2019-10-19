@@ -1,6 +1,6 @@
 mixin navItem(link, name)
   li.section__nav-item
-    a(href=link).section__nav-link=name
+    a(href=link, id=id).section__nav-link=name
 
 ul.section__nav
   +navItem('#', 'Link for display')
