@@ -137,9 +137,10 @@ $(document).ready(function() {
         getContent(data[id].titles, data[id].text, data[id].cards);
       });
     });
+    /* ---------------------------------------------------- */
 
-
-  });
+  }); // end of Fetch
+  /*------------------- */
 
 
 });
